@@ -243,8 +243,9 @@ public class Encryption {
 		var e = new Encryption();
 		e.setKey();
 
-		String s = e.encrypt("salam");
+		var s = e.encrypt("salam");
+		var result = e.decrypt(s);
 		LOGGER.log(Level.INFO, s);
-		LOGGER.log(Level.INFO, () -> e.decrypt(s));
+		LOGGER.log(Level.INFO, result);
 	}
 }
